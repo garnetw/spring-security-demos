@@ -7,8 +7,8 @@ target/
 
 ### Maven ###
 /.mvn/
-mvnw
-mvnw.cmd
+/mvnw
+/mvnw.cmd
 
 ### STS ###
 .apt_generated
@@ -37,4 +37,3 @@ build/
 
 ### VS Code ###
 .vscode/
-**/.DS_Store

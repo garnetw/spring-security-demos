@@ -6,9 +6,9 @@ target/
 /src/test/
 
 ### Maven ###
+/mvnw
+/mvnw.cmd
 /.mvn/
-mvnw
-mvnw.cmd
 
 ### STS ###
 .apt_generated
@@ -37,4 +37,3 @@ build/
 
 ### VS Code ###
 .vscode/
-**/.DS_Store
