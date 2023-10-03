@@ -21,6 +21,7 @@
 	<modules>
 		<module>default-config</module>
 		<module>memory-config</module>
+		<module>memory-role-config</module>
 	</modules>
 
 	<properties>
