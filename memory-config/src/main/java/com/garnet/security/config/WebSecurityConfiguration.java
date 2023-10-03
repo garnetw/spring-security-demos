@@ -26,7 +26,6 @@ public class WebSecurityConfiguration {
         return http.build();
     }
 
-
     /**
      * 创建基于内存的用户账号，用于替换框架默认的user账号
      * @return in-memory credentials
@@ -34,10 +33,10 @@ public class WebSecurityConfiguration {
     @Bean
     public InMemoryUserDetailsManager userDetailsService() {
         UserDetails user = User.builder()
-                                .username("guest").password("123123")
-                                .passwordEncoder(passwordEncoder()::encode)
-                                .roles("guest")
-                                .build();
+                            .username("config")
+                            .password("123123").passwordEncoder(passwordEncoder()::encode)
+                            .roles("GUEST")
+                            .build();
 
         // InMemoryUserDetailsManager() 可以传递多个 user 对象。
         return new InMemoryUserDetailsManager(user);
