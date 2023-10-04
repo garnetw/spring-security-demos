@@ -23,6 +23,7 @@
 		<module>memory-config</module>
 		<module>memory-role-config</module>
 		<module>db-config</module>
+		<module>jwt-config</module>
 	</modules>
 
 	<properties>

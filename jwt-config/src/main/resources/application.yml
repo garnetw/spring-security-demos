@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/security?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: willow0130
+
+
+mybatis:
+  type-aliases-package: com.garnet.security.model
+  mapper-locations: classpath:mapper/*Mapper.xml
+
+
+jwt:
+  header: Authorization
+  secretKey: garnetabcdefghijklmnopqrstuvwxyzabcdefgarnet
+  duration: 120   # 2h

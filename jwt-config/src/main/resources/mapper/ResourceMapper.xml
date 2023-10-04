@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.garnet.security.mapper.ResourceMapper">
+    <resultMap id="BaseResultMap" type="com.garnet.security.model.Resource">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="path" property="path" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="type" property="type" jdbcType="TINYINT" />
+    </resultMap>
+
+
+    <select id="selectAll" resultMap="BaseResultMap">
+        select * from resource
+    </select>
+
+    <select id="getIdsByUserId" parameterType="int" resultType="int">
+        select resource_id from role_resource where role_id in (
+            select role_id from user_role where user_id = #{userId}
+        )
+    </select>
+</mapper>
